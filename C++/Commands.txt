@@ -1,0 +1,16 @@
+# GCC (g++) - Compilar y ejecutar
+g++ -o two_sum "1. Two Sum.cpp"
+.\two_sum.exe
+
+# Compilar con estándar C++17 y warnings
+g++ -std=c++17 -Wall -o two_sum "1. Two Sum.cpp"
+
+# Ver versión del compilador
+g++ --version
+
+# MSVC (cl) - En Developer Command Prompt
+cl "1. Two Sum.cpp" /Fe:two_sum.exe
+two_sum.exe
+
+# Ver versión de cl
+cl

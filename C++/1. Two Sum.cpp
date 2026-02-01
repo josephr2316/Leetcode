@@ -72,10 +72,14 @@ public:
             pos[nums[i]] = i;
         }
         return {};
-        return {};
     }
 };
 
-int main(){
+int main() { // int main(int argc, char *argv[])
+    Solution solution;
+    vector<int> nums = {2, 7, 11, 15};
+    int target = 9;
+    vector<int> result = solution.twoSum(nums, target);
+    cout << "[" << result[0] << ", " << result[1] << "]" << endl;  // [0, 1]
     return 0;
 }

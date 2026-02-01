@@ -1,3 +1,7 @@
 # C# / .NET
 C#/bin/
 C#/obj/
+
+# C++ build output
+C++/*.exe
+C++/*.o
