@@ -1,0 +1,13 @@
+# --- Si estás DENTRO de la carpeta Java ---
+javac "1. Two Sum.java"
+cd ..
+java -cp . Java.Solution
+cd Java
+
+# --- Si estás en la raíz del repo (Leetcode) ---
+# javac Java/"1. Two Sum.java"
+# java -cp . Java.Solution
+
+# Ver versión
+# java -version
+# javac -version
