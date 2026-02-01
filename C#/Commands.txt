@@ -1,6 +1,14 @@
+# Ejecutar un ejercicio concreto (recomendado)
+dotnet run -p "1. Two Sum.csproj"
+
+# Cuando tengas más ejercicios, por ejemplo:
+# dotnet run -p "2. Add Two Numbers.csproj"
+# dotnet run -p "3. Longest Substring.csproj"
+
+# Proyecto por defecto (Two Sum)
 dotnet run
 dotnet build
 dotnet clean
+
+# Versión de .NET
 dotnet --version
-dotnet run --no-build // Ejecutar el exe. ya compilado
-o tambien, .\bin\Debug\net8.0\Leetcode.exe
