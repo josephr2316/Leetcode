@@ -1,3 +1,7 @@
+using System.Collections.Generic;
+using System.Linq;
+using System;
+
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
     //Brute Force Approach
@@ -75,4 +79,17 @@ public class Solution {
     }
     return new int[] { };
   }
+}
+
+// Ejemplo: programa con Main para probar Two Sum
+class Program
+{
+    static void Main(string[] args)
+    {
+        var solution = new Solution();
+        int[] nums = { 2, 7, 11, 15 };
+        int target = 9;
+        int[] result = solution.TwoSum(nums, target);
+        System.Console.WriteLine($"[{result[0]}, {result[1]}]"); // [0, 1]
+    }
 }
