@@ -1,0 +1,12 @@
+# Ejecutar un archivo (desde la carpeta Python)
+python "1. Two Sum.py"
+
+# O con python3 si tienes ambas versiones
+# python3 "1. Two Sum.py"
+
+# Ejecutar otro ejercicio cuando lo tengas
+# python "2. Add Two Numbers.py"
+
+# Ver versión de Python
+python --version
+# python3 --version

@@ -1,9 +1,10 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(len(nums)):
-            for j in range(i + 1, len(nums)):
-                if (nums[i] + nums[j] == target):
-                    return [i, j]
+        # Brute force (comentado para usar hash map)
+        # for i in range(len(nums)):
+        #     for j in range(i + 1, len(nums)):
+        #         if (nums[i] + nums[j] == target):
+        #             return [i, j]
 
     # map = {}
     # for i in range(len(nums)):
@@ -12,13 +13,13 @@ class Solution:
     #         return [map[complement], i]
     #     map[nums[i]] = i    
 
-    numMap = {}
-    for i, num in enumerate(nums):
-        numMap[num] = i
-    for i, num in enumerate(nums):
-        complement = target - num
-        if complement in numMap and numMap[complement] != i:
-            return [i, numMap[complement]]
+    # numMap = {}
+    # for i, num in enumerate(nums):
+    #     numMap[num] = i
+    # for i, num in enumerate(nums):
+    #     complement = target - num
+    #     if complement in numMap and numMap[complement] != i:
+    #         return [i, numMap[complement]]
 
 
     # pos = {x: i for i, x in enumerate(nums)}
@@ -48,12 +49,17 @@ class Solution:
 
 
 
-    numMap = {}
-      for i, num in enumerate(nums):
-          complement = target - num
-          if complement in numMap:
-            return [numMap[complement], i]
-          numMap[num] = i
-    return []
+        numMap = {}
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in numMap:
+                return [numMap[complement], i]
+            numMap[num] = i
+        return []
 
-print(twoSum([2, 7, 11, 15], 9))
+if __name__ == "__main__":
+    solution = Solution()
+    nums = [2, 7, 11, 15]
+    target = 9
+    result = solution.twoSum(nums, target)
+    print(result)  # [0, 1]
