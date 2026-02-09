@@ -1,0 +1,48 @@
+# ========== TYPESCRIPT ==========
+# Desde la carpeta JS-TS
+
+# 1) Ejecutar TS directo (sin compilar) - requiere ts-node o tsx
+npx ts-node "1. Two Sum.ts"
+# o (más rápido, recomendado):
+npx tsx "1. Two Sum.ts"
+
+# 2) Compilar TS a JS y luego ejecutar
+npx tsc "1. Two Sum.ts"
+node "1. Two Sum.js"
+
+# 3) Compilar con tsconfig
+npx tsc
+node "1. Two Sum.js"
+
+# Ver versión
+npx tsc --version
+
+# Instalar dependencias (solo la primera vez, para ts-node/tsx)
+# npm install -D ts-node tsx typescript
+
+
+# ========== JAVASCRIPT ==========
+# Ejecutar un .js directamente (no hace falta compilar)
+node "1. Two Sum.js"
+
+# Si el archivo es .js:
+# node "archivo.js"
+
+
+# ========== DIFERENCIA TS vs JS ==========
+# - TypeScript (.ts): tiene tipos, se compila a .js con "tsc" o se ejecuta con ts-node/tsx.
+# - JavaScript (.js): se ejecuta directo con "node archivo.js".
+# Para este repo: escribes en .ts, ejecutas con "npx tsx archivo.ts" o compilas y "node archivo.js".
+
+
+# ========== MÓDULOS EN TYPESCRIPT ==========
+# En tsconfig.json, "module" define cómo se compila import/export:
+#
+# - "CommonJS" (module: "CommonJS"): sale require() y module.exports. Clásico de Node.
+# - "ESNext" / "ES2020" (module: "ESNext"): sale import/export. Moderno, requiere "type": "module" en package.json o extensión .mjs.
+# - "NodeNext" (module: "NodeNext"): sigue las reglas de Node (ESM o CJS según el archivo).
+#
+# Resumen:
+# - CommonJS: const x = require("..."); module.exports = x;
+# - ES Modules: import x from "..."; export default x;
+# Este proyecto usa "type": "module" en package.json, así que es ES Modules.
